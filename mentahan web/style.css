@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+#memeContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#memeImage {
+    width: 300px; /* Sesuaikan ukuran */
+    height: auto;
+    border-radius: 10px;
+}
+
+#closeMeme {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.form-container {
+    width: 85%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Pusatkan secara vertikal dan horizontal */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.options input {
+    width: 20px;
+    height: 20px;
+    accent-color: #232523;
+    /* Mengubah warna sesuai tema */
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Memberi jarak antara radio button dan teks */
+}
+
+.options input {
+    width: 20px;
+    height: 20px;
+    accent-color: #232523;
+}
+
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 1.1em;
+}
+
+.options input {
+    margin-right: 10px;
+}
+
+.btn-submit {
+    margin-top: 10px;
+    background-color: #232523;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #000000;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result p {
+    font-size: 1.2em;
+}
+
+.incorrect {
+    color: rgb(255, 0, 0);
+}
+
+.correct {
+    color: rgb(0, 0, 0);
+}
+
+.result-question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.correct-answer {
+    background-color: #e0f8e0;
+    /* Hijau muda */
+    color: #006400;
+    /* Hijau gelap */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.incorrect-answer {
+    background-color: #f8e0e0;
+    /* Merah muda */
+    color: #8B0000;
+    /* Merah gelap */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.correct-answer .correct-text {
+    color: #006400;
+    /* Hijau gelap */
+}
+
+.incorrect-answer .wrong-text {
+    color: #8B0000;
+    /* Merah gelap */
+}
+
+.correct-answer .true-answer {
+    color: black;
+    font-weight: bold;
+}

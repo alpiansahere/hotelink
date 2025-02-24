@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LATIHAN !</title>
+</head>
+
+<body>
+    <div class="form-container" id="nameContainer">
+        <h1>FORM INPUT</h1>
+        <form id="nameForm">
+            <label for="name">Masukkan Nama Anda :</label><br />
+            <input type="text" id="name" name="name" required /><br>
+            <label for="email">Masukkan email Anda :</label><br />
+            <input type="email" id="email" name="email" required /><br><br>
+            <label for="musicToggle">Music On/Off</label>
+            <input type="checkbox" id="musicToggle" /><br><br>
+            <button type="submit" class="btn-submit">Mulai Quiz</button>
+        </form>
+    </div>
+    <div class="form-container" id="quizContainer" style="display: none">
+        <div id="timerContainer">
+            <strong id="userName"></strong> | <span id="timer"></span>
+        </div>        
+        <form id="quizForm">
+            <div class="question" id="question1">
+                <p>1. チェックアウトについて正しいものを一つ選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal1" value="A"> お客様がホテルや旅館（りょかん）から退出（たいしゅつ）する時に行（おこ）なう手続（てつづ）き 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal1" value="B"> お客様が館外（かんがい）の外（そと）にお出（で）かけするとき
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal1" value="C"> 買（か）いたいものがあって、外（そと）に出（で）るとき 
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit">Selesai</button>
+            </div>
+    </div>
+    </form>
+    </div>
+
+    <div id="resultContainer" class="result" style="display: none">
+        <center>
+            <h1>HASIL :</h1>
+        </center>
+        <p id="userName"></p>
+        <p id="userEmail"></p>
+        <p id="correctAnswers"></p>
+        <p id="wrongAnswers"></p>
+        <p id="averageScore"></p>
+        <hr>
+        <div id="feedback"></div>
+    </div>
+    <audio id="backgroundMusic" loop>
+        <source src="sholawat.mp3" type="audio/mpeg">
+    </audio>
+    <script src="index.js"></script>
+</body>
+
+</html>
