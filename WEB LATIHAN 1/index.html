@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LATIHAN 1!</title>
+</head>
+
+<body>
+    <div class="form-container" id="nameContainer">
+<h1>FORM INPUT</h1>
+<audio id="bgMusic" loop>
+    <source src="../bgmusic.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung tag audio.
+</audio>
+
+<form id="nameForm">
+    <label for="name">Masukkan Nama Anda :</label><br />
+    <input type="text" id="name" name="name" required /><br>
+    <label for="email">Masukkan email Anda :</label><br />
+    <input type="email" id="email" name="email" required />
+    <br>
+    <label>
+        <label class="switch">
+            Music
+            <input type="checkbox" id="musicToggle">
+            <span class="slider round"></span>
+          </label>
+    </label>
+    <br>
+    <button type="submit" class="btn-submit" onclick="startQuiz(event)">Mulai Quiz</button>
+    <br>
+</form>
+    </div>
+    <div class="form-container" id="quizContainer" style="display: none">
+        <div class="top">
+            <p>Setatus : ON</p>
+            <p>&nbsp;|&nbsp; timer : &nbsp;</p>
+            <p id="timer"></p>
+        </div>
+        <form id="quizForm">
+            <div class="question" id="question1">
+                <p>1. チェックアウトについて正しいものを一つ選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal1" value="A"> お客様がホテルや旅館（りょかん）から退出（たいしゅつ）する時に行（おこ）なう手続（てつづ）き 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal1" value="B"> お客様が館外（かんがい）の外（そと）にお出（で）かけするとき
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal1" value="C"> 買（か）いたいものがあって、外（そと）に出（で）るとき 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn1" class="btn-submit" onclick="nextQuestion(1)">Next</button>
+            </div>
+            <div class="question" id="question2" style="display: none;">
+                <p>2. お客様が予約（よやく）のキャンセルを求（もと）めた場合についての払（はら）う料金（はらうりょうきん）は何ですか？</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal2" value="A"> 宿泊税（しゅくはくぜい） 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal2" value="B"> サービス料（りょう）
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal2" value="C"> キャンセル料（りょう） 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn2" class="btn-submit" onclick="nextQuestion(2)">Next</button>
+            </div>
+            
+            <div class="question" id="question3" style="display: none;">
+                <p>3. 素泊（すど）まりプランについて正しいものを一つ選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal3" value="A"> 宿泊（しゅくはく）とちょうしょくが含（ふく）まれているプランのこと 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal3" value="B"> 食事（しょくじ）をせずに宿泊（しゅくはく）プランのこと
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal3" value="C"> 朝食（ちょうしょく）と夕食（ゆうしょく）と宿泊（しゅくはく）が含（ふく）まれているプランのこと 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn3" class="btn-submit" onclick="nextQuestion(3)">Next</button>
+            </div>
+            <div class="question" id="question4" style="display: none;">
+                <p>4. 宿泊（しゅくはく）するゲストにどんな呼（よ）び方をしますか？</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal4" value="A"> お客さん 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal4" value="B"> あなた
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal4" value="C"> お客様（きゃくさま） 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn4" class="btn-submit" onclick="nextQuestion(4)">Next</button>
+            </div>
+            <div class="question" id="question5" style="display: none;">
+                <p>5. 館内（かんない）の従業員（じゅうぎょおういん）の身（み）だしなみについて正しいものを一つ選びなさい。</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal5" value="A"> 靴（くつ）は脱（ぬ）ぎやすいようにかかとの部分（ぶぶん）を踏（ふ）んで、靴（くつ）を履（は）く 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal5" value="B"> 少（すこ）しよげれていたらすぐに拭（ふ）いて、きれいな状態（じょうたい）を保（たも）つ
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal5" value="C"> 靴底（くつぞこ）は減（へ）りすぎてもよい 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn5" class="btn-submit" onclick="nextQuestion(5)">Next</button>
+            </div>
+            <div class="question" id="question6" style="display: none;">
+                <p>6. レセプションの仕事（しごと）について正しいものを一つ選びなさい。</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal6" value="A"> お客様の荷物（にもつ）を客室（きゃくしつ）まで運（はこ）ぶ役名（やくめい）を持（も）つ 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal6" value="B"> お客様のお出迎え（でむかえ）からお見送（みおく）りまで様々（さまざま）な手続き（てつづき）を担当（たんとう）するスタッフのこと
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal6" value="C"> ワインを作（つく）る仕事（しごと）をすること 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn6" class="btn-submit" onclick="nextQuestion(6)">Next</button>
+            </div>
+            <div class="question" id="question7" style="display: none;">
+                <p>7. ホテルや旅館（りょかん）で朝食（ちょうしょく）の基準料理（きじゅんりょうり）は何ですか？</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal7" value="A"> オムレツ 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal7" value="B"> チョコレートケーキ
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal7" value="C"> ピッザー 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn7" class="btn-submit" onclick="nextQuestion(7)">Next</button>
+            </div>
+            <div class="question" id="question8" style="display: none;">
+                <p>8. お客様の荷物（にもつ）を運（はこ）ぶ際、間違っているものを選んでください</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal8" value="A"> 丁寧（ていねい）にお客様の荷物（にもつ）をはこびます 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal8" value="B"> お客様の荷物（にもつ）を部屋（へや）の前（まえ）のろうかにおきます
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal8" value="C"> お客様の部屋内（へやない）まで荷物（にもつ）を運（はこ）びます 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn8" class="btn-submit" onclick="nextQuestion(8)">Next</button>
+            </div>
+            <div class="question" id="question9" style="display: none;">
+                <p>9. 地震（じしん）が起（お）こった際はどうすれば対応（たいおう）しますか？</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal9" value="A"> エレベーターで迅速的(じんそくてき）にお客様を避難（ひなん）させる 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal9" value="B"> 階段（かいだん）で避難（ひなん）させる
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal9" value="C"> 建物（たてもの）が高（たか）い場合（ばあい）は避難（ひなん）ロープでホテルを降りさせない 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn9" class="btn-submit" onclick="nextQuestion(9)">Next</button>
+            </div>
+            <div class="question" id="question10" style="display: none;">
+                <p>10. チェックインとチェックアウトの最初(さいしょ)を手続き(てつづき)している担当者(たんとうしゃ)。正しいものを選びなさい。</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal10" value="A"> アテンダント 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal10" value="B"> フロントクラーク
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal10" value="C"> レセプション 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn10" class="btn-submit" onclick="nextQuestion(10)">Next</button>
+            </div>
+            <div class="question" id="question11" style="display: none;">
+                <p>11. お客様が手伝（てつだ）いを求（もと）めた時、自分がお客様（きゃくさま）の希望（きぼう）にこたえられない場合について正しいものを一つ選びなさい。</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal11" value="A"> 自分でできないときは上司（じょうし）に連絡（れんらく）する 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal11" value="B"> お客様の希望（きぼう）に答（こた）える
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal11" value="C"> 後輩（こうはい）にやらせる 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn11" class="btn-submit" onclick="nextQuestion(11)">Next</button>
+            </div>
+            
+            <div class="question" id="question12" style="display: none;">
+                <p>12. 自分（じぶん）の仕事（しごと）が忙（いそが）しいとき、お客様が手伝（てつだ）いを求（もと）めた場合（ばあい）、正しいものを一つ選びなさい。</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal12" value="A"> 自分（じぶん）の仕事（しごと）を先（さき）に終（お）わらせてお客様を手伝（てつだ）う 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal12" value="B"> お客様が怒（おこ）っていなければ、無視（むし）してもよい
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal12" value="C"> お客様を優先（ゆうせん）する 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn12" class="btn-submit" onclick="nextQuestion(12)">Next</button>
+            </div>
+            
+            
+            <div class="question" id="question13" style="display: none;">
+                <p>13. 利用客(りようきゃく)が商品(しょうひん)やサービスに対(たい)する評価(ひょうか)をウェブサイトなどに書(か)き込(こ)み。正しいものを選びなさい。</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal13" value="A"> フェードバック 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal13" value="B"> クレーム
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal13" value="C"> 口コミ 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn13" class="btn-submit" onclick="nextQuestion(13)">Next</button>
+            </div>
+            <div class="question" id="question14" style="display: none;">
+                <p>14. レストランでテーブルマナーについて、間違いものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal14" value="A"> 口（くち）の中（なか）に包（つつ）んでいる食べ物（たべもの）があるときにしゃべりません 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal14" value="B"> テーブルで食べるときは帽子（ぼうし）をかぶって食べます
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal14" value="C"> 食（た）べる前（まえ）に"いただきます"と言う 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn14" class="btn-submit" onclick="nextQuestion(14)">Next</button>
+            </div>
+            <div class="question" id="question15" style="display: none;">
+                <p>15. 予約（よやく）せずに立（た）ちよった顧客（こきゃく）について正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal15" value="A"> ウオークイン 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal15" value="B"> FIT
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal15" value="C"> VIP 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn15" class="btn-submit" onclick="nextQuestion(15)">Next</button>
+            </div>
+            <div class="question" id="question16" style="display: none;">
+                <p>16. 広報業務（こうほうぎょうむ）の仕事（しごと）について正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal16" value="A"> フロントで仕事をする 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal16" value="B"> 他（ほか）の人にお客様の情報（じょうほう）を教（おし）える
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal16" value="C"> 情報発信 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn16" class="btn-submit" onclick="nextQuestion(16)">Next</button>
+            </div>
+            
+            
+            <div class="question" id="question17" style="display: none;">
+                <p>17. 和食（わしょく）では旬（しゅん）っていう言葉（ことば）について正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal17" value="A"> .新鮮（しんせん）で味（あじ）がいい食材（しょくざい）を使います 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal17" value="B"> 春夏秋冬（しゅんかしゅとう）の食材（しょくざい）ではない
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal17" value="C"> 一汁三菜（いちじゅうさんさい）の基本（きほん）です 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn17" class="btn-submit" onclick="nextQuestion(17)">Next</button>
+            </div>
+            <div class="question" id="question18" style="display: none;">
+                <p>18. ビールをお客様にリクエストされたときについて正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal18" value="A"> .泡（あわ）を適切（てきせつ）に作（つく）って注（そそ）ぐ 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal18" value="B"> ビールをコップいっぱいまで注（そそ）ぐ
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal18" value="C"> ビールを炭酸水（たんさんすい）とまぜる 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn18" class="btn-submit" onclick="nextQuestion(18)">Next</button>
+            </div>
+            <div class="question" id="question19" style="display: none;">
+                <p>19. 宿泊施設内（しゅくはくしせつない）でお客様をご案内（あんない）する際（さい）には正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal19" value="A"> お客様の後（うし）ろに歩（ある）きます 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal19" value="B"> お客様の前（まえ）に歩（ある）いて、後（うし）ろのお客様を見（み）ないで歩（ある）きつづきます
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal19" value="C"> 2~3歩（ぽ）、左前方（ひだりぜんぽう）を、お客様の歩調合（ほちょうあ）わせながら歩（ある）きます 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn19" class="btn-submit" onclick="nextQuestion(19)">Next</button>
+            </div>
+            <div class="question" id="question20" style="display: none;">
+                <p>20. 宿泊（しゅくはく）の中（なか）に朝食（ちょうしょく）のみ含（ふく）まれている宿泊（しゅくはく）プランについて正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal20" value="A"> B&B 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal20" value="B"> 連泊（れんぱく）
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal20" value="C"> 一泊二食（いっぱくにしょく） 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn20" class="btn-submit" onclick="nextQuestion(20)">Next</button>
+            </div>
+            <div class="question" id="question21" style="display: none;">
+                <p>21. .ワインに関（かん）する専門知識（せんもんちしき）を持（も）ち、ワインが専門職（せんもんしょく）として、正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal21" value="A"> ワイトレす 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal21" value="B"> .チェフ
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal21" value="C"> ソムリエ 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn21" class="btn-submit" onclick="nextQuestion(21)">Next</button>
+            </div>
+            
+            <div class="question" id="question22" style="display: none;">
+                <p>22. 日本（にほん）ではチップを受（う）けとる習慣（しゅうかん）について正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal22" value="A"> 日本人（にほんじん）や外国人（がいこくじん）にチップを求（もと）めない 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal22" value="B"> チップを受（うけ）けなければサービスしません
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal22" value="C"> .チップをいつものときも求（もと）めることにする 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn22" class="btn-submit" onclick="nextQuestion(22)">Next</button>
+            </div>
+            <div class="question" id="question23" style="display: none;">
+                <p>23. 車（くるま）いすのお客様（きゃくさま）とコミュニケーションを取（と）る際（さい）は正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal23" value="A"> 目（め）は会（あ）わせずに話（はな）すこと 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal23" value="B"> 姿勢（しせい）はいつもと同（おな）じ立っていること
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal23" value="C"> お客様（きゃくさま）と目（め）の高（たか）さを合（あ）わせて対応（たいおう）すること 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn23" class="btn-submit" onclick="nextQuestion(23)">Next</button>
+            </div>
+            <div class="question" id="question24" style="display: none;">
+                <p>24. 館内施設（かんないしせつ）の衛生管理（えいせいかんり）について正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal24" value="A"> テーブルが汚（よご）れていたらそのまま拭（ふ）き取（と）らない 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal24" value="B"> 仕事（しごと）する前後（ぜんご）に手洗（てあら）いを心（こころ）がけます
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal24" value="C"> お皿洗（さらあら）うときは乾（かわ）かさないで自然（しぜん）に乾（かわ）かさせる 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn24" class="btn-submit" onclick="nextQuestion(24)">Next</button>
+            </div>
+            
+            
+            <div class="question" id="question25" style="display: none;">
+                <p>25. レストランのテーブルが汚（よご）れていたらどんな行動（こうどう）を取（と）るか正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal25" value="A"> すぐにカトラリーを下（さ）げてテーブルを拭（ふ）き取（と）ったら消毒（しょうどく）することです 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal25" value="B"> ほかの従業員（じゅうぎょういん）にやらせる
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal25" value="C"> 担当者（たんとうしゃ）を呼（よ）ぶ 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn25" class="btn-submit" onclick="nextQuestion(25)">Next</button>
+            </div>
+            <div class="question" id="question26" style="display: none;">
+                <p>26. 自社（じしゃ）のウェブサイトでは何を投稿（とうこう）しますか、間違っているものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal26" value="A"> 住所（じゅうしょ）や社長（しゃちょう）の名前（なまえ） 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal26" value="B"> 館内施設（かんないしせつ）の写真（しゃしん）
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal26" value="C"> 予約情報（よやくじょうほう） 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn26" class="btn-submit" onclick="nextQuestion(26)">Next</button>
+            </div>
+            <div class="question" id="question27" style="display: none;">
+                <p>27. お客様（きゃくさま）の目（め）にかからないとき、そして仕事（しごと）のとき、従業員（じゅうぎょういん）として、正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal27" value="A"> 仕事（しごと）の内容以外（ないよういがい）の会話（かいわ）は控（ひか）えます 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal27" value="B"> 裏方（うらかた）はお客様（きゃくさま）のことを雑談（ざつだん）はしてもよい
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal27" value="C"> レストランのキャッサーはお客様（きゃくさま）の前（まえ）で雑談（ざつだん）しなければならない 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn27" class="btn-submit" onclick="nextQuestion(27)">Next</button>
+            </div>
+            
+            <div class="question" id="question28" style="display: none;">
+                <p>28. お客様から、施設側（しせつがわ）がいい評価（ひょうか）を求（もと）めたいとき従業員（じゅうぎょういん）としてどんな行動（こうどう）を取（と）りますか</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal28" value="A"> お客様（きゃくさま）にいいおもてなしとサービスをする 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal28" value="B"> お客様（きゃくさま）からチップを受（う）けなければサービスしません
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal28" value="C"> 障害（しょうがい）を持（も）っているお客様には特別（とくべつ）な扱（あつか）いをします 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn28" class="btn-submit" onclick="nextQuestion(28)">Next</button>
+            </div>
+            <div class="question" id="question29" style="display: none;">
+                <p>29. 宿泊（しゅくはく）する時（とき）に客室（きゃくしつ）にあるシャンプーやタオルなどについて正しいものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal29" value="A"> カスター 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal29" value="B"> コンプリメンタリー
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal29" value="C"> アメニティ類（るい） 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn29" class="btn-submit" onclick="nextQuestion(29)">Next</button>
+            </div>
+            <div class="question" id="question30" style="display: none;">
+                <p>30. サービスの利用（りよう）を保証（ほしょう）するために支払（しはら）われる金額（きんがく）について間違っているものを選びなさい</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal30" value="A"> 預（あず）かり金（きん） 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal30" value="B"> デポジット
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal30" value="C"> サービス料（りょう） 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn30" class="btn-submit" onclick="nextQuestion(30)">Next</button>
+            </div>
+            <div class="question" id="question31" style="display: none;">
+                <img src="" alt="">
+                <p>31. チェックイン時間に関しては正しいものを一つ選びなさい。</p>
+                <img src="img/hotel.jpeg" alt="" style="width: 50%;">
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal31" value="A"> 14時から 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal31" value="B"> 15時から
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal31" value="C"> 12時から 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn31" class="btn-submit" onclick="nextQuestion(31)">Next</button>
+            </div>
+            <div class="question" id="question32" style="display: none;">
+                <p>32. お客様が露天風呂（ろてんぶろう）に入浴（にゅうよく）したい場合、スタッフとしての役割（やくわり）はどこへ案内（あんない）しますか？</p>
+                <img src="img/hotel.jpeg" alt="" style="width: 50%;">
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal32" value="A"> 10F 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal32" value="B"> ３Ｆ
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal32" value="C"> ４Ｆ 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn32" class="btn-submit" onclick="nextQuestion(32)">Next</button>
+            </div>
+            <div class="question" id="question33" style="display: none;">
+                <p>33. お客様が朝食を食べたいときはどこへ案内すうればいいですか？</p>
+                <img src="img/hotel.jpeg" alt="" style="width: 50%;">
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal33" value="A"> 2F 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal33" value="B"> 3F
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal33" value="C"> 1F 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn33" class="btn-submit" onclick="nextQuestion(33)">Next</button>
+            </div>
+            
+            <div class="question" id="question34" style="display: none;">
+                <p>34. 客室（きゃくしつ）に予約（よやく）が埋（う）まったお部屋（へや）が80室（しつ）,OCCは何パーセントですか？</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal34" value="A">  40% 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal34" value="B">  60%
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal34" value="C">  80% 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn34" class="btn-submit" onclick="nextQuestion(34)">Next</button>
+            </div>
+            <div class="question" id="question35" style="display: none;">
+                <p>35. これは何の絵（え）ですか？</p>
+                <img src="img/alat.jpg" alt="" style="width: 50%;">
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal35" value="A">  火災報知器（かさいほうちき） 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal35" value="B">  消火器（しょうかき）
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal35" value="C"> 消化器（しょうかき） 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn35" class="btn-submit" onclick="nextQuestion(35)">Next</button>
+            </div>
+            <div class="question" id="question36" style="display: none;">
+                <p>36. E wo mite tadashi kotae wo erabinasai.</p>
+                <img src="img/twin.jpg" alt="" style="width: 50%;">
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal36" value="A"> シングルベッド 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal36" value="B"> ふたつのシングルベッドのお部屋
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal36" value="C"> ツインルーム 
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit">Selesai</button>
+            </div>
+    </div>
+    </form>
+    </div>
+
+    <div id="resultContainer" class="result" style="display: none">
+        <center>
+            <h1>HASIL :</h1>
+        </center>
+        
+        <p id="userName"></p>
+        <p id="userEmail"></p>
+        <p id="correctAnswers"></p>
+        <p id="wrongAnswers"></p>
+        <p id="averageScore"></p>
+        <hr>
+        <div id="feedback"></div>
+        <br>
+        <button onclick="window.location.href='index.html';">Kembali ke Halaman Utama</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
