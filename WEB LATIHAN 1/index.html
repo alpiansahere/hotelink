@@ -10,16 +10,36 @@
 
 <body>
     <div class="form-container" id="nameContainer">
-        <h1>FORM INPUT</h1>
-        <form id="nameForm">
-            <label for="name">Masukkan Nama Anda :</label><br />
-            <input type="text" id="name" name="name" required /><br>
-            <label for="email">Masukkan email Anda :</label><br />
-            <input type="email" id="email" name="email" required />
-            <button type="submit" class="btn-submit">Mulai Quiz</button>
-        </form>
+<h1>FORM INPUT</h1>
+<audio id="bgMusic" loop>
+    <source src="../../music.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung tag audio.
+</audio>
+
+<form id="nameForm">
+    <label for="name">Masukkan Nama Anda :</label><br />
+    <input type="text" id="name" name="name" required /><br>
+    <label for="email">Masukkan email Anda :</label><br />
+    <input type="email" id="email" name="email" required />
+    <br>
+    <label>
+        <label class="switch">
+            Music
+            <input type="checkbox" id="musicToggle">
+            <span class="slider round"></span>
+          </label>
+    </label>
+    <br>
+    <button type="submit" class="btn-submit" onclick="startQuiz(event)">Mulai Quiz</button>
+    <br>
+</form>
     </div>
     <div class="form-container" id="quizContainer" style="display: none">
+        <div class="top">
+            <p>Setatus : ON</p>
+            <p>&nbsp;|&nbsp; timer : &nbsp;</p>
+            <p id="timer"></p>
+        </div>
         <form id="quizForm">
             <div class="question" id="question1">
                 <p>1. チェックアウトについて正しいものを一つ選びなさい</p>
@@ -587,6 +607,7 @@
         <center>
             <h1>HASIL :</h1>
         </center>
+        
         <p id="userName"></p>
         <p id="userEmail"></p>
         <p id="correctAnswers"></p>
@@ -594,6 +615,8 @@
         <p id="averageScore"></p>
         <hr>
         <div id="feedback"></div>
+        <br>
+        <button onclick="window.location.href='index.html';">Kembali ke Halaman Utama</button>
     </div>
 
     <script src="index.js"></script>
