@@ -8,44 +8,15 @@ h1 {
     text-align: center;
     color: #333;
 }
-#memeContainer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    display: none;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#memeImage {
-    width: 300px; /* Sesuaikan ukuran */
-    height: auto;
-    border-radius: 10px;
-}
-
-#closeMeme {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-}
-
-
 
 .form-container {
-    width: 85%;
+    width: 50%;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
+
     /* Pusatkan secara vertikal dan horizontal */
     position: absolute;
     top: 50%;
@@ -96,7 +67,8 @@ h1 {
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
-    width: 100%;
+    width: 50%;
+    margin-top: 10px;
 }
 
 .btn-submit:hover {
@@ -163,4 +135,111 @@ h1 {
 .correct-answer .true-answer {
     color: black;
     font-weight: bold;
+}
+
+.top {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+#nameForm {
+    display: flex;
+    flex-direction: column;
+    /* Agar label dan input tersusun ke bawah */
+    justify-content: center;
+    /* Pusatkan secara vertikal */
+    align-items: center;
+    /* Pusatkan secara horizontal */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 50%;
+    padding: 7px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+    margin-left: 10px;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #4CAF50;
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+@media (max-width: 600px) {
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 80%;
+    }
+}
+
+button {
+    background-color: #2a2b2a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #000000;
 }
