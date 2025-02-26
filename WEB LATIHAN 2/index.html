@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LATIHAN !</title>
+</head>
+
+<body>
+    <div class="form-container" id="nameContainer">
+        <h1>FORM INPUT</h1>
+        <form id="nameForm">
+            <label for="name">Masukkan Nama Anda :</label><br />
+            <input type="text" id="name" name="name" required /><br>
+            <label for="email">Masukkan email Anda :</label><br />
+            <input type="email" id="email" name="email" required />
+
+            <br>
+
+            <button type="submit" class="btn-submit" onclick="startCountdown(30)">Mulai Quiz</button>
+        </form>
+    </div>
+    <div class="form-container" id="quizContainer" style="display: none">
+        <div class="top"><p>Setatus : ON</p><p>&nbsp;|&nbsp; timer : &nbsp;</p><p id="timer"></p></div >
+        <form id="quizForm">
+            <div class="question" id="question1" >
+                <p>36. E wo mite tadashi kotae wo erabinasai.</p>
+                <img src="img/twin.jpg" alt="" style="width: 50%;">
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soal1" value="A"> シングルベッド 
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal1" value="B"> ふたつのシングルベッドのお部屋
+                    </label><br>
+                    <label>
+                        <input type="radio" name="soal1" value="C"> ツインルーム 
+                    </label>
+                </div>
+                <button type="button" id="nextBtn1" class="btn-submit" onclick="nextQuestion(1)">Next</button>
+            </div>
+    </div>
+    </form>
+    </div>
+
+    <div id="resultContainer" class="result" style="display: none">
+        <center>
+            <h1>HASIL :</h1>
+        </center>
+        <p id="userName"></p>
+        <p id="userEmail"></p>
+        <p id="correctAnswers"></p>
+        <p id="wrongAnswers"></p>
+        <p id="averageScore"></p>
+        <hr>
+        <div id="feedback"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
