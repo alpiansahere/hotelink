@@ -17,7 +17,21 @@
 </audio>
 
 <form id="nameForm">
-   <h1>COMING SOON!</h1>
+    <label for="name">Masukkan Nama Anda :</label><br />
+    <input type="text" id="name" name="name" required /><br>
+    <label for="email">Masukkan email Anda :</label><br />
+    <input type="email" id="email" name="email" required />
+    <br>
+    <label>
+        <label class="switch">
+            Music
+            <input type="checkbox" id="musicToggle">
+            <span class="slider round"></span>
+          </label>
+    </label>
+    <br>
+    <button type="submit" class="btn-submit" onclick="startQuiz(event)">Mulai Quiz</button>
+    <br>
 </form>
     </div>
     <div class="form-container" id="quizContainer" style="display: none">
