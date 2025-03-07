@@ -62,7 +62,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
         {
             question: " 預り金(あずかりきん)の意味として、正しいものを選びなさい。",
             questionKey: "soal2",
-            correctAnswer: " デポジット",
+            correctAnswer: "デポジット",
             options: {
                 "A": " デポジット",
                 "B": "販売料金(はんばいりょうきん)",
@@ -232,7 +232,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
         {
             question: " お客様が帰(かえ)りの際にお見送(みおく)りするとき。お辞儀(おじぎ)は何度(なんど)ですか？",
             questionKey: "soal18",
-            correctAnswer: ".45度",
+            correctAnswer: "45度",
             options: {
                 "A": "45度",
                 "B": "30度",
@@ -323,7 +323,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
         {
             question: " 利用客(りようきゃく)が商品(しょうひん)やサービスに対(たい)する評価(ひょうか)をウェブサイトなどに書(か)き込(こ)み。正しいものを選びなさい",
             questionKey: "soal27",
-            correctAnswer: ".口コミ",
+            correctAnswer: "口コミ",
             options: {
                 "A": "フェードバック",
                 "B": "クレーム",
@@ -353,7 +353,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
         {
             question: " ホテルが行(おこな）うサービスのうち、料飲部門(りょういんぶもん)の仕事(しごと)に含（ふく）まれるものとして、正しいものを選びなさい。",
             questionKey: "soal30",
-            correctAnswer: " ルームサービス",
+            correctAnswer: "ルームサービス",
             options: {
                 "A": " ルームサービス",
                 "B": "近隣施設（きんりんしせつ）の案内(きんりんしせつあんない)",
