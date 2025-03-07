@@ -266,9 +266,9 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
         {
             question: " 和食（わしょく）では旬（しゅん）っていう言葉（ことば）について正しいものを選びなさい",
             questionKey: "soal17",
-            correctAnswer: ".新鮮（しんせん）で味（あじ）がいい食材（しょくざい）を使います",
+            correctAnswer: "新鮮（しんせん）で味（あじ）がいい食材（しょくざい）を使います",
             options: {
-                "A": ".新鮮（しんせん）で味（あじ）がいい食材（しょくざい）を使います",
+                "A": "新鮮（しんせん）で味（あじ）がいい食材（しょくざい）を使います",
                 "B": "春夏秋冬（しゅんかしゅとう）の食材（しょくざい）ではない",
                 "C": "一汁三菜（いちじゅうさんさい）の基本（きほん）です"
             }
@@ -280,9 +280,9 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
         {
             question: " ビールをお客様にリクエストされたときについて正しいものを選びなさい",
             questionKey: "soal18",
-            correctAnswer: ".泡（あわ）を適切（てきせつ）に作（つく）って注（そそ）ぐ",
+            correctAnswer: "泡（あわ）を適切（てきせつ）に作（つく）って注（そそ）ぐ",
             options: {
-                "A": ".泡（あわ）を適切（てきせつ）に作（つく）って注（そそ）ぐ",
+                "A": "泡（あわ）を適切（てきせつ）に作（つく）って注（そそ）ぐ",
                 "B": "ビールをコップいっぱいまで注（そそ）ぐ",
                 "C": "ビールを炭酸水（たんさんすい）とまぜる"
             }
@@ -324,7 +324,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
             correctAnswer: "ソムリエ",
             options: {
                 "A": "ワイトレす",
-                "B": ".チェフ",
+                "B": "チェフ",
                 "C": "ソムリエ"
             }
         },
@@ -339,7 +339,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
             options: {
                 "A": "日本人（にほんじん）や外国人（がいこくじん）にチップを求（もと）めない",
                 "B": "チップを受（うけ）けなければサービスしません",
-                "C": ".チップをいつものときも求（もと）めることにする"
+                "C": "チップをいつものときも求（もと）めることにする"
             }
         },
         
@@ -515,7 +515,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
         {
             question: " これは何の絵（え）ですか？",
             questionKey: "soal35",
-            correctAnswer: " 消火器（しょうかき）",
+            correctAnswer: "消火器（しょうかき）",
             options: {
                 "A": " 火災報知器（かさいほうちき）",
                 "B": " 消火器（しょうかき）",
