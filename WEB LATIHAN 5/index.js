@@ -338,7 +338,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
             options: {
                 "A": "下座(しもざ)から",
                 "B": "上座(かみざ)から",
-                "C": ".出入口(でいりぐち)"
+                "C": "出入口(でいりぐち)"
             }
         },
 
@@ -350,7 +350,7 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
             correctAnswer: "前菜(ぜんさい)、メインコース、デザート",
             options: {
                 "A": "前菜(ぜんさい)、メインコース、デザート",
-                "B": ".飲み物、メインコース、デザート",
+                "B": "飲み物、メインコース、デザート",
                 "C": "メインコース、デザート、コーヒー"
             }
         },
