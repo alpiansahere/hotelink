@@ -517,9 +517,9 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
             questionKey: "soal35",
             correctAnswer: "消火器（しょうかき",
             options: {
-                "A": " 火災報知器（かさいほうちき",
-                "B": " 消火器（しょうかき",
-                "C": " 避難はしご（ひなんはしご"
+                "A": "火災報知器（かさいほうちき)",
+                "B": "消火器（しょうかき)",
+                "C": "避難はしご（ひなんはしご)"
             }
         },
         
