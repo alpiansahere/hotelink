@@ -515,11 +515,11 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
         {
             question: " これは何の絵（え）ですか？",
             questionKey: "soal35",
-            correctAnswer: "消火器（しょうかき）",
+            correctAnswer: "消火器（しょうかき",
             options: {
-                "A": " 火災報知器（かさいほうちき）",
-                "B": " 消火器（しょうかき）",
-                "C": "消化器（しょうかき）"
+                "A": " 火災報知器（かさいほうちき",
+                "B": " 消火器（しょうかき",
+                "C": " 避難はしご（ひなんはしご"
             }
         },
         
